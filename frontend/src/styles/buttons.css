@@ -1,0 +1,15 @@
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button.btn-primary {
+  color: #f9f9f9;
+  background-color: #5d63e6;
+}
