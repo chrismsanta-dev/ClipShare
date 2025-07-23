@@ -1,0 +1,25 @@
+.dashboard {
+  padding: 24px 16px !important;
+}
+
+.control-panel {
+  padding: 16px 16px;
+  background-color: #2e325c;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.display-type {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.clip-grid {
+  padding: 24px 0;
+  display: grid;
+  grid-template-columns: repeat(2, 320px);
+  gap: 24px;
+}

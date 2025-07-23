@@ -7,9 +7,10 @@ button {
   border: none;
   cursor: pointer;
   font-size: 16px;
+  color: #f9f9f9;
+  background-color: transparent;
 }
 
 button.btn-primary {
-  color: #f9f9f9;
   background-color: #5d63e6;
 }

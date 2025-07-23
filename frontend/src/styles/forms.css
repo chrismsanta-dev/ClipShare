@@ -13,6 +13,14 @@ form {
   button {
     margin-top: 16px;
   }
+
+  a {
+    color: #5d63e6;
+  }
+
+  span {
+    margin-top: 12px;
+  }
 }
 
 .form-field {

@@ -1,1 +1,16 @@
-<p>dashboard works!</p>
+<div class="container dashboard">
+  <!-- Page Controls/Filters  -->
+  <div class="control-panel">
+    <span class="display-type">
+      <button (click)="onSelectDisplayType('all')" [class.btn-primary]="displayType() === 'all'">All Clips</button>
+      <button (click)="onSelectDisplayType('personal')" [class.btn-primary]="displayType() === 'personal'">Your Clips</button>
+    </span>
+    <span class="sort-by"></span>
+  </div>
+  <!-- Clips -->
+  <div class="clip-grid">
+    @if (clips()) { @for (clip of clips(); track clip.id) {
+    <app-clip-card />
+    } }
+  </div>
+</div>

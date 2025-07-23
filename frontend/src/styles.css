@@ -19,6 +19,7 @@ body {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
+  color: #f9f9f9;
 }
 
 app-root {
@@ -31,4 +32,10 @@ app-root {
   height: calc(100% - 60px);
   width: 100%;
   overflow: auto;
+}
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 16px !important;
 }
