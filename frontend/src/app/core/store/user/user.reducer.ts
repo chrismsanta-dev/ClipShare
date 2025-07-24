@@ -6,11 +6,13 @@ import { DUMMY_USERS } from '../../../../../public/data/DUMMY_USERS';
 export interface UserState {
   currentUser: User | undefined;
   lastLogin: Date | undefined;
+  error: Error | undefined;
 }
 
 const initialState: Readonly<UserState> = {
   currentUser: DUMMY_USERS[0],
   lastLogin: undefined,
+  error: undefined,
 };
 
 export const userReducer = createReducer(

@@ -1,1 +1,13 @@
-<div class="clip-card"></div>
+<div class="clip-card">
+  <div class="preview-container">
+    <img class="preview" [src]="clip().url" />
+    <h3>{{ clip().title }}</h3>
+    <p>{{ clip().username }}</p>
+  </div>
+
+  <div class="actions">
+    <div class="votes"><img src="icons/upvote.svg" />{{ clip().votes }} <img src="icons/downvote.svg" /></div>
+    <div class="views"><img src="icons/view.svg" />{{ clip().views }}</div>
+    <div class="comments"><img src="icons/comments.svg" />test</div>
+  </div>
+</div>

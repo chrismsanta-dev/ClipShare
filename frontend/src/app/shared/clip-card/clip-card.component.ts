@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
+import { Clip } from '../../core/models/clip.model';
 
 @Component({
   selector: 'app-clip-card',
@@ -6,4 +7,6 @@ import { Component } from '@angular/core';
   templateUrl: './clip-card.component.html',
   styleUrl: './clip-card.component.css',
 })
-export class ClipCardComponent {}
+export class ClipCardComponent {
+  public clip = input.required<Clip>();
+}

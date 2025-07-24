@@ -3,5 +3,8 @@ export interface Clip {
   url: string;
   title: string;
   userId: string;
-  likes: number;
+  username: string;
+  votes: number;
+  comments: Comment[];
+  views: number;
 }

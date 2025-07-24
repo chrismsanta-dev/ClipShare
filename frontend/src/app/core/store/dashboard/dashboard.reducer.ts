@@ -8,12 +8,14 @@ export interface DashboardState {
   clips: Clip[] | undefined;
   displayType: DisplayType | undefined;
   sortType: undefined;
+  error: Error | undefined;
 }
 
 const initialState: DashboardState = {
   clips: DUMMY_CLIPS,
   displayType: 'all',
   sortType: undefined,
+  error: undefined,
 };
 
 export const dashboardReducer = createReducer(
@@ -22,6 +24,12 @@ export const dashboardReducer = createReducer(
     return {
       ...state,
       displayType,
+    };
+  }),
+  on(DashboardActions.setClips, (state, { clips }) => {
+    return {
+      ...state,
+      clips,
     };
   })
 );

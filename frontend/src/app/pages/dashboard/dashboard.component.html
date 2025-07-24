@@ -10,7 +10,7 @@
   <!-- Clips -->
   <div class="clip-grid">
     @if (clips()) { @for (clip of clips(); track clip.id) {
-    <app-clip-card />
+    <app-clip-card [clip]="clip" />
     } }
   </div>
 </div>
