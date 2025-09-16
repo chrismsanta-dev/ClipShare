@@ -43,3 +43,6 @@ Thumbs.db
 
 # Dummy Data
 /public/data
+
+#Environment Configs
+/environment/environment.development.ts
