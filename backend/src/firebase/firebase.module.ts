@@ -8,14 +8,14 @@ import * as admin from 'firebase-admin';
       // eslint-disable-next-line @typescript-eslint/require-await
       useFactory: async () => {
         // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-require-imports
-        const serviceAccount = require('../../keys/firebase-key.json');
+        const serviceAccount = require('../../keys/firebase-admin-key.json');
         if (!admin.apps.length) {
           admin.initializeApp({
             // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
             credential: admin.credential.cert(serviceAccount),
           });
         }
-        return admin.firestore();
+        return admin;
       },
     },
   ],
