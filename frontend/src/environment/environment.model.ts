@@ -5,4 +5,5 @@ export interface Environment {
   storageBucket: string;
   messagingSenderId: string;
   appId: string;
+  apiEndpoint: string;
 }

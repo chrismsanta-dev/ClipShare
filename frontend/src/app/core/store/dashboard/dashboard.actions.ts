@@ -1,16 +1,13 @@
-import { createActionGroup, props } from '@ngrx/store';
-import { DisplayType } from '../../models/dashboard.model';
-import { Clip } from '../../models/clip.model';
+import { Clip } from '@app/core/models/clip.model';
+import { DisplayType } from '@app/core/models/dashboard.model';
+import { createAction, props } from '@ngrx/store';
 
-export const DashboardActions = createActionGroup({
-  source: 'Dashboard',
-  events: {
-    'Set Display Type': props<{ displayType: DisplayType }>(),
-    'Set Clips': props<{ clips: Clip[] }>(),
-  },
-});
+export const setDisplayType = createAction('[Dashboard] Set Display Type', props<{ displayType: DisplayType }>());
 
-export const DashboardApiActions = createActionGroup({
-  source: 'Dashboard API',
-  events: {},
-});
+export const getAllClips = createAction('[Dashboard] Get All Clips');
+export const getAllClipsSuccess = createAction('[Dashboard] Get All Clips Success', props<{ clips: Clip[] }>());
+export const getAllClipsFailure = createAction('[Dashboard] Get All Clips Failure');
+
+export const getPersonalClips = createAction('[Dashboard] Get Personal Clips');
+export const getPersonalClipsSuccess = createAction('[Dashboard] Get Personal Clips Success', props<{ clips: Clip[] }>());
+export const getPersonalClipsFailure = createAction('[Dashboard] Get Personal Clips Failure');

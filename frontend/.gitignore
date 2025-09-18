@@ -45,4 +45,4 @@ Thumbs.db
 /public/data
 
 #Environment Configs
-/environment/environment.development.ts
+src/environment/environment.development.ts

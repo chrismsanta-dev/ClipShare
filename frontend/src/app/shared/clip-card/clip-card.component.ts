@@ -1,5 +1,5 @@
 import { Component, input } from '@angular/core';
-import { Clip } from '../../core/models/clip.model';
+import { Clip } from '@app/core/models/clip.model';
 
 @Component({
   selector: 'app-clip-card',
