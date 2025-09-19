@@ -3,6 +3,6 @@
     <!-- Logo and Navigation -->
     <h1 (click)="onDashboardNavigate()" class="logo">ClipShare</h1>
     <!-- Account Management -->
-    <span></span>
+    <span class="account-management" (click)="onLogoutLogin()">{{ authService.getCurrentUser() ? "Logout" : "Login / Register" }}</span>
   </div>
 </div>

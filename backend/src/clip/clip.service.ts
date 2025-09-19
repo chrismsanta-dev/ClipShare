@@ -1,9 +1,9 @@
 import { Injectable } from '@nestjs/common';
-import { storage } from 'src/firebase/firebase.config';
 import { FirestoreService } from 'src/firebase/firestore.service';
-import { CreateClipDto } from 'src/models/clip/clip.dto';
-import { Clip } from 'src/models/clip/clip.model';
+import { CreateClipDto } from 'src/clip/models/clip.dto';
+import { Clip } from 'src/clip/models/clip.model';
 import { v4 as uuid } from 'uuid';
+import * as admin from 'firebase-admin';
 
 @Injectable()
 export class ClipSerice {
@@ -14,7 +14,7 @@ export class ClipSerice {
 
     if (file) {
       const fileName = `clips/${uuid()}-${file.originalname}`;
-      const fileUpload = storage.file(fileName);
+      const fileUpload = admin.storage().bucket().file(fileName);
 
       await fileUpload.save(file.buffer, {
         metadata: { contentType: file.mimetype },

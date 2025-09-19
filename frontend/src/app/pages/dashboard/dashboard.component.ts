@@ -23,7 +23,7 @@ export class DashboardComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.store.dispatch(getAllClips());
+    if (!this.clips() || !this.clips()?.length) this.store.dispatch(getAllClips());
   }
 
   protected onSelectDisplayType(displayType: DisplayType): void {

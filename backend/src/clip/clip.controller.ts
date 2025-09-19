@@ -1,8 +1,8 @@
 import { Body, Controller, Delete, Get, Param, Post, UploadedFile, UseInterceptors } from '@nestjs/common';
 import { FileInterceptor } from '@nestjs/platform-express';
 import { FirestoreService } from 'src/firebase/firestore.service';
-import { CreateClipDto } from 'src/models/clip/clip.dto';
-import { Clip } from 'src/models/clip/clip.model';
+import { CreateClipDto } from 'src/clip/models/clip.dto';
+import { Clip } from 'src/clip/models/clip.model';
 import { ClipSerice } from './clip.service';
 
 @Controller('clips')
