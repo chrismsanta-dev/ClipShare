@@ -4,3 +4,11 @@
   align-items: center;
   justify-content: center;
 }
+
+form {
+  width: 400px;
+
+  @media (max-width: 500px) {
+    width: 250px !important;
+  }
+}

@@ -1,13 +1,13 @@
 <form #form (ngSubmit)="onLogin()">
   <h1>Login</h1>
-  <div class="form-field">
-    <label>Email</label>
-    <input name="email" id="email" />
-  </div>
-  <div class="form-field">
-    <label>Password</label>
-    <input name="password" id="password" type="password" />
-  </div>
+  <mat-form-field>
+    <mat-label>Email</mat-label>
+    <input matInput name="email" id="email" />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Password</mat-label>
+    <input matInput name="password" id="password" type="password" />
+  </mat-form-field>
 
   <button class="btn-primary" type="submit">Login</button>
   <span>Don't have an account? <a href="register">Register!</a></span>

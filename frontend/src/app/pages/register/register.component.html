@@ -1,22 +1,22 @@
 <form #form (ngSubmit)="onRegister()">
   <h1>Register</h1>
 
-  <div class="form-field">
-    <label>Email</label>
-    <input name="email" id="email" />
-  </div>
-  <div class="form-field">
-    <label>Username</label>
-    <input name="username" id="username" />
-  </div>
-  <div class="form-field">
-    <label>Password</label>
-    <input name="password" id="password" type="password" />
-  </div>
-  <div class="form-field">
-    <label>Confirm Password</label>
-    <input name="confirmPassword" id="confirmPassword" type="password" />
-  </div>
+  <mat-form-field>
+    <mat-label>Email</mat-label>
+    <input matInput name="email" id="email" autocomplete="off" />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Username</mat-label>
+    <input matInput name="username" id="username" autocomplete="off" />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Password</mat-label>
+    <input matInput name="password" id="password" type="password" autocomplete="off" />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Confirm Password</mat-label>
+    <input matInput name="confirmPassword" id="confirmPassword" type="password" autocomplete="off" />
+  </mat-form-field>
 
   <button class="btn-primary">Register</button>
   <span>Already have an account? <a href="login">Login!</a></span>
